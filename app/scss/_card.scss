@@ -1,0 +1,103 @@
+.container {
+  display: flex;
+  flex-flow: column;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-width: 40rem;
+
+  section {
+    padding: 1.5rem;
+  }
+
+  .community {
+    background-color: $White;
+
+    h2 {
+      color: $Cyan;
+      font-size: 17pt;
+    }
+
+    h3 {
+      color: $BrightYellow;
+      font-size: 13pt;
+    }
+
+    p {
+      line-height: 2rem;
+      font-size: 12pt;
+      font-weight: normal;
+    }
+  }
+
+  .Subscription {
+    background-color: $Cyan;
+    color: $White;
+
+    h2 {
+      font-size: 16pt;
+    }
+
+    h3 {
+      display: flex;
+      align-items: center;
+      font-size: 35pt;
+      margin: 0 0 1rem 0;
+      span {
+        opacity: 0.65;
+        font-size: 1rem;
+        font-weight: normal;
+        padding-left: 1rem;
+      }
+    }
+
+    p {
+      margin-bottom: 2.5rem;
+    }
+
+    a {
+      display: block;
+      background-color: $BrightYellow;
+      color: $White;
+      height: 16rem;
+      padding: 1rem;
+      height: max-content;
+      text-align: center;
+      border-radius: 0.25rem;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      transition: background-color 200ms ease;
+
+      &:hover {
+        background-color: $DarkerYellow;
+      }
+    }
+  }
+
+  .why {
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      font-size: medium;
+
+      li {
+        margin-bottom: 0.3rem;
+        font-weight: normal;
+        opacity: 0.65;
+      }
+    }
+
+    h2 {
+      font-size: 16pt;
+    }
+    background-color: $ltCyan;
+    color: $White;
+  }
+
+  @include breakpoint-up(medium) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    .community {
+      grid-column: 1/3;
+    }
+  }
+}
